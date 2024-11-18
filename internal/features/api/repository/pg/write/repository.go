@@ -1,7 +1,9 @@
-package read
+package write
 
 import "context"
 
 type WriteRepository interface {
-	Read(context.Context) ([]string, error)
+	Create(context.Context, string) error
+	Update(context.Context, string) error
+	Delete(context.Context, string) error
 }
